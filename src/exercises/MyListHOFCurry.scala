@@ -1,5 +1,7 @@
 package exercises
 
+import scala.annotation.tailrec
+
 abstract class MyListHOFCurry[+A] {
   def head: A
   def tail: MyListHOFCurry[A]

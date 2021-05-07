@@ -14,6 +14,11 @@ object WhatsAFunction extends App {
 
   println(doubler(2))
 
+  val doubler2 = new Function1[Int, Int] {
+    override def apply(element: Int): Int = element * 2
+  }
+
+
   // function types = Function1[A, B]
   val stringToIntConverter = new Function1[String, Int] {
     override def apply(string: String): Int = string.toInt
@@ -21,7 +26,7 @@ object WhatsAFunction extends App {
 
   println(stringToIntConverter("3") + 4)
 
-  val adder: ((Int, Int) => Int) = new Function2[Int, Int, Int] {
+  val adder = new Function2[Int, Int, Int] {
     override def apply(a: Int, b: Int): Int = a + b
   }
 

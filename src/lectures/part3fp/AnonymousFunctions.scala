@@ -7,7 +7,8 @@ object AnonymousFunctions extends App {
 
   // anonymous function (LAMBDA)
   val doubler: Int => Int = (x: Int) => x * 2
-  // short: val doubler = (x: Int) => x * 2
+
+  val doubler2 = (x: Int) => x * 2
   // or :   val doubler: Int => Int = x => x * 2
 
   // multiple params in a lambda
@@ -50,4 +51,6 @@ object AnonymousFunctions extends App {
 
   val superAdd = (x: Int) => (y: Int) => x + y
   println(superAdd(3)(4))
+  def superAdd3(a: Int)(b: Int) = a + b
+  println(superAdd3(23)(21))
 }
