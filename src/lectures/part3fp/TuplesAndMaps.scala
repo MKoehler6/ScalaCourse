@@ -8,7 +8,10 @@ import scala.annotation.tailrec
 object TuplesAndMaps extends App {
 
   // tuples = finite ordered "lists"
-  val aTuple = (2, "hello, Scala")  // Tuple2[Int, String] = (Int, String)
+  val aTuple = (2, "hello, Scala")// Tuple2[Int, String] = (Int, String)
+
+  val aTuple2 = (2, "hello, Scala", List(1,2,3))
+  aTuple2.productIterator.foreach(i => println("Value = " + i))
 
   println(aTuple._1)  // 2
   println(aTuple.copy(_2 = "goodbye Java"))

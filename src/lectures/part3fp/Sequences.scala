@@ -72,6 +72,7 @@ object Sequences extends App {
 
   val numbersList = (1 to maxCapacity).toList
   val numbersVector = (1 to maxCapacity).toVector
+  val numbersArray = Array.ofDim(maxCapacity)
 
   // keeps reference to tail
   // updating an element in the middle takes long
@@ -79,5 +80,7 @@ object Sequences extends App {
   // depth of the tree is small
   // needs to replace an entire 32-element chunk
   println(getWriteTime(numbersVector) + " ns") // 2467.5 ns = 0.002 ms
+
+  println(getWriteTime(numbersArray) + " ns")
 
 }
